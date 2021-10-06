@@ -99,8 +99,10 @@ function handleMessage(sender_psid, received_message) {
 
 // Funcionalidad del postback
 function handlePostback(sender_psid, received_postback) {
-  let responde = '';
+  let response = '';
+
   const payload = received_postback.payload;
+
   if(payload === 'yes'){
     response = {'text': 'Gracias por la foto :)'}
   }else if(payload === 'no'){
@@ -125,6 +127,7 @@ function callSendAPI(sender_psid, response) {
     'method': 'POST',
     'json': requestBody
   }, (err, res, body) =>{
+    
     if(!err){
       console.log('Mensaje enviado de vuelta')
     }else{
