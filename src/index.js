@@ -109,17 +109,37 @@ function handlePostback(sender_psid, received_postback) {
              {
               "title":"Teclados",
               "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
-              "subtitle":"Ejemplo de prueba",
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
               "buttons":[
                 {
                   "type":"postback",
-                  "title":"Si",
+                  "title":"Ver las ofertas",
                   "payload": "yes"
-                },{
+                }             
+              ]      
+            },
+            {
+              "title":"Mouse",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Para escritorio, gaming, etc.",
+              "buttons":[
+                {
                   "type":"postback",
-                  "title":"No",
-                  "payload":"no"
-                }              
+                  "title":"Ver las ofertas",
+                  "payload": "yes"
+                }             
+              ]      
+            },
+            {
+              "title":"Pantallas ",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Planas, curvas, y para toda necesidad.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ver las ofertas",
+                  "payload": "yes"
+                }             
               ]      
             }
           ]
