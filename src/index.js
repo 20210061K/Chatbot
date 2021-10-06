@@ -62,7 +62,7 @@ function handleMessage(sender_psid, received_message) {
 
   if(received_message.text){
     response = {
-      'text': `Tu mensaje fue: ${received_message}`
+      'text': `Tu mensaje fue: ${received_message.text}`
     }
   }
 
