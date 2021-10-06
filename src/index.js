@@ -61,7 +61,7 @@ app.get("/webhook", (req, res) => {
 function handleMessage(sender_psid, received_message) {
   let response;
 
-  if(received_message.text === 'Hola'){
+  if(received_message.text){
     response = {
       "attachment":{
         "type":"template",
@@ -71,15 +71,18 @@ function handleMessage(sender_psid, received_message) {
           "buttons":[
             {
               "type":"postback",
-              "title":"Ver las ofertas"
+              "title":"Ver las ofertas",
+              "payload" : 'A'
             },
             {
               "type":"postback",
-              "title":"Ir a la tienda online"
+              "title":"Ir a la tienda online",
+              "payload" : 'B'
             },
             {
               "type":"postback",
-              "title":"Hablar con un agente"
+              "title":"Hablar con un agente",
+              "payload" : 'C'
             }
           ]
         }
@@ -92,9 +95,20 @@ function handleMessage(sender_psid, received_message) {
 
 // Funcionalidad del postback
 function handlePostback(sender_psid, received_postback) {
-  
-}
+  let response = '';
 
+  const payload = received_postback.payload;
+
+  if(payload === 'A'){
+    response = { 'text' : 'Escogiste A' }
+  }else if(payload === 'B'){
+    response = { 'text' : 'Escogiste B' }
+  }else if(payload === 'B'){
+    response = { 'text' : 'Escogiste C' }
+  }
+
+  callSendAPI(sender_psid,response);
+}
 // Mensaje de regreso
 function callSendAPI(sender_psid, response) {
   const requestBody = {
