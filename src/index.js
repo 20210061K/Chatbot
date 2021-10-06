@@ -11,7 +11,7 @@ app.post("/webhook", (req, res) => {
     body.entry.forEach(entry => {
       //entran y procesan mensajes
       const webhookEvent = entry.messaging[0];
-      console.log(webhook);
+      console.log(webhookEvent);
     });
 
     res.status(200).sendStatus('EVENTO RECIBIDO')
