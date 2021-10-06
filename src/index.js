@@ -120,7 +120,7 @@ function handlePostback(sender_psid, received_postback) {
             },
             {
               "title":"Mouse",
-              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "image_url": 'https://falabella.scene7.com/is/image/FalabellaPE/17448782_1?wid=800&hei=800&qlt=70',
               "subtitle":"Para escritorio, gaming, etc.",
               "buttons":[
                 {
@@ -132,7 +132,7 @@ function handlePostback(sender_psid, received_postback) {
             },
             {
               "title":"Pantallas ",
-              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "image_url": 'https://spartangeek.com/blog/content/images/2019/04/Asus-ROG-Swift-PG27UQ-monitores-para-pc.jpg',
               "subtitle":"Planas, curvas, y para toda necesidad.",
               "buttons":[
                 {
