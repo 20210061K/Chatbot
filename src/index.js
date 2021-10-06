@@ -108,7 +108,7 @@ function handlePostback(sender_psid, received_postback) {
           "elements":[
              {
               "title":"Teclados",
-              "image_url": 'https://postimg.cc/R39yRMXK',
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
               "subtitle":"Ejemplo de prueba",
               "buttons":[
                 {
