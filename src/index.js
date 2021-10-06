@@ -100,7 +100,32 @@ function handlePostback(sender_psid, received_postback) {
   const payload = received_postback.payload;
 
   if(payload === 'A'){
-    response = { 'text' : 'Escogiste A' }
+    response = {
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"generic",
+          "elements":[
+             {
+              "title":"Teclados",
+              "image_url": 'https://postimg.cc/R39yRMXK',
+              "subtitle":"Ejemplo de prueba",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Si",
+                  "payload": "yes"
+                },{
+                  "type":"postback",
+                  "title":"No",
+                  "payload":"no"
+                }              
+              ]      
+            }
+          ]
+        }
+      }
+    }
   }else if(payload === 'B'){
     response = { 'text' : 'Escogiste B' }
   }
