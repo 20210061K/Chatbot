@@ -12,7 +12,6 @@ app.post("/webhook", (req, res) => {
   console.log("POST: webhook");
 
   const body = req.body;
-
   if (body.object === "page") {
     body.entry.forEach(entry => {
       //se reciben y procesan mensajes
@@ -71,20 +70,23 @@ function handleMessage(sender_psid, received_message) {
       "attachment":{
         "type":"template",
         "payload":{
-          "template_type":"button",
-          "text": "¿Que deseas hacer?",
-          "buttons":[
-            {
-              "type":"postback",
-              "title":"Ver las ofertas"
-            },
-            {
-              "type":"postback",
-              "title":"Ir a la tienda online"
-            },
-            {
-              "type":"postback",
-              "title":"Hablar con un agente"
+          "template_type":"generic",
+          "elements":[
+             {
+              "title":"Confirma tu imagen",
+              "image_url": url,
+              "subtitle":"Ejemplo de prueba",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Si",
+                  "payload": "yes"
+                },{
+                  "type":"postback",
+                  "title":"No",
+                  "payload":"no"
+                }              
+              ]      
             }
           ]
         }
@@ -125,7 +127,7 @@ function callSendAPI(sender_psid, response) {
     'method': 'POST',
     'json': requestBody
   }, (err, res, body) =>{
-
+    
     if(!err){
       console.log('Mensaje enviado de vuelta')
     }else{
