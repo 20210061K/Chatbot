@@ -103,7 +103,7 @@ function handlePostback(sender_psid, received_postback) {
     response = { 'text' : 'Escogiste A' }
   }else if(payload === 'B'){
     response = { 'text' : 'Escogiste B' }
-  }else if(payload === 'B'){
+  }else if(payload === 'C'){
     response = { 'text' : 'Escogiste C' }
   }
 
