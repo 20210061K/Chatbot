@@ -75,14 +75,14 @@ function handleMessage(sender_psid, received_message) {
               "payload" : 'A'
             },
             {
-              "type":"postback",
+              "type":"web_url",
               "title":"Ir a la tienda online",
-              "payload" : 'B'
+              "url" : 'https://www.linio.com.pe'
             },
             {
               "type":"postback",
               "title":"Hablar con un agente",
-              "payload" : 'C'
+              "payload" : 'B'
             }
           ]
         }
@@ -103,8 +103,6 @@ function handlePostback(sender_psid, received_postback) {
     response = { 'text' : 'Escogiste A' }
   }else if(payload === 'B'){
     response = { 'text' : 'Escogiste B' }
-  }else if(payload === 'C'){
-    response = { 'text' : 'Escogiste C' }
   }
 
   callSendAPI(sender_psid,response);
