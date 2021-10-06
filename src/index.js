@@ -79,7 +79,6 @@ function handleMessage(sender_psid, received_message) {
               "buttons":[
                 {
                   "type":"postback",
-                  "url":"https://petersfancybrownhats.com",
                   "title":"Si",
                   "payload": "yes"
                 },{
