@@ -62,7 +62,36 @@ function handleMessage(sender_psid, received_message) {
 
   if(received_message.text){
     response = {
-      'text': `Tu mensaje fue: ${received_message.text}`
+      'text': `Tu mensaje fue: ${received_message.text}, ahora mandame una imagen...`
+    }
+  }else if(received_message.attachements){
+    const url = received_message.attachements[0].payload.url;
+    response = {
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"generic",
+          "elements":[
+             {
+              "title":"Confirma tu imagen",
+              "image_url": url,
+              "subtitle":"Ejemplo de prueba",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "url":"https://petersfancybrownhats.com",
+                  "title":"Si",
+                  "payload": "yes"
+                },{
+                  "type":"postback",
+                  "title":"No",
+                  "payload":"no"
+                }              
+              ]      
+            }
+          ]
+        }
+      }
     }
   }
 
