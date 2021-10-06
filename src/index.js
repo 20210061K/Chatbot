@@ -75,15 +75,15 @@ function handleMessage(sender_psid, received_message) {
               "payload" : 'A'
             },
             {
+              "type":"postback",
+              "title":"Hablar con un agente",
+              "payload" : 'B'
+            },
+            {
               "type":"web_url",
               "title":"Ir a la tienda online",
               "url" : 'https://www.linio.com.pe'
             },
-            {
-              "type":"postback",
-              "title":"Hablar con un agente",
-              "payload" : 'B'
-            }
           ]
         }
       }
