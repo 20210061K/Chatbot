@@ -58,7 +58,7 @@ app.get("/webhook", (req, res) => {
 
 // Administrar eventos que lleguen
 function handleMessage(sender_psid, received_message) {
-  let responde;
+  let response;
 
   if(received_message.text){
     response = {
@@ -66,7 +66,7 @@ function handleMessage(sender_psid, received_message) {
     }
   }
 
-  callSendAPI(sender_psid, responde)
+  callSendAPI(sender_psid, response)
 }
 
 // Funcionalidad del postback
