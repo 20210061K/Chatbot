@@ -1,7 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const request = require('request')
 
 const app = express().use(bodyParser.json());
+
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+
+app.set('port',process.env.PORT || 8080)
 
 app.post("/webhook", (req, res) => {
   console.log("POST: webhook");
@@ -9,9 +14,19 @@ app.post("/webhook", (req, res) => {
   const body = req.body;
   if (body.object === "page") {
     body.entry.forEach(entry => {
-      //entran y procesan mensajes
+      //se reciben y procesan mensajes
       const webhookEvent = entry.messaging[0];
       console.log(webhookEvent);
+
+      const sender_psid = webhookEvent.sender.id;
+      console.log(`Sender PSID: ${sender_psid}`);
+
+      //validar que estamos recibiendo un mensaje
+      if(webhookEvent.message){
+        handleMessage(sender_psid, webhookEvent.message);
+      }else if(webhookEvent.postback){
+        handlePostback(sender_psid, webhookEvent.postback)
+      }
     });
 
     res.status(200).send('EVENTO RECIBIDO')
@@ -41,9 +56,46 @@ app.get("/webhook", (req, res) => {
   }
 });
 
+// Administrar eventos que lleguen
+function handleMessage(sender_psid, received_message) {
+  let responde;
 
-app.set('port',process.env.PORT || 8080)
+  if(received_message.text){
+    response = {
+      'text': `Tu mensaje fue: ${received_message}`
+    }
+  }
 
+  callSendAPI(sender_psid, responde)
+}
+
+// Funcionalidad del postback
+function handlePostback(sender_psid, received_postback) {
+
+}
+
+// Mensaje de regreso
+function callSendAPI(sender_psid, response) {
+  const requestBody = {
+    'recipient' : {
+      'id': sender_psid
+    },
+    'message': response
+  };
+
+  request({
+    'uri': 'https://graph.facebook.com/v2.6/me/messages',
+    'qs': {'access_token': PAGE_ACCESS_TOKEN},
+    'method': 'POST',
+    'json': requestBody
+  }, (err, res, body) =>{
+    if(!err){
+      console.log('Mensaje enviado de vuelta')
+    }else{
+      console.error('Imposible enviar el mensaje')
+    }
+  })
+}
 
 app.listen(app.get('port'), () => {
   console.log(`Server on port ${app.get('port')}`);
