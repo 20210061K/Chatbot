@@ -61,7 +61,7 @@ app.get("/webhook", (req, res) => {
 function handleMessage(sender_psid, received_message) {
   let response;
 
-  if(received_message.text){
+  if(received_message.text === 'asd'){
     response = {
       "attachment":{
         "type":"template",
