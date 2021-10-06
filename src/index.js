@@ -62,7 +62,6 @@ function handleMessage(sender_psid, received_message) {
   let response;
 
   if(received_message.text){
-    const url = received_message.attachments[0].payload.url;
     response = {
       "attachment":{
         "type":"template",
