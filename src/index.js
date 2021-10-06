@@ -14,7 +14,7 @@ app.post("/webhook", (req, res) => {
       console.log(webhookEvent);
     });
 
-    res.status(200).sendStatus('EVENTO RECIBIDO')
+    res.status(200).send('EVENTO RECIBIDO')
   } else {
     res.sendStatus(404);
   }
