@@ -204,9 +204,7 @@ function handlePostback(sender_psid, received_postback) {
         }
       }
     }
-  }
-  
-  if(payload === "gamer"){
+  }else if(payload === "gamer"){
     response = {
       "attachment":{
         "type":"template",
@@ -300,9 +298,7 @@ function handlePostback(sender_psid, received_postback) {
         }
       }
     }
-  }
-
-  if(payload === "plana"){
+  }else if(payload === "plana"){
     response = {
       "attachment":{
         "type":"template",
@@ -397,6 +393,10 @@ function handlePostback(sender_psid, received_postback) {
       }
     }
   }
+  
+  
+
+  
 
   callSendAPI(sender_psid,response);
 }
