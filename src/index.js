@@ -163,8 +163,7 @@ function handlePostback(sender_psid, received_postback) {
       "attachment":{
         "type":"template",
         "payload":{
-          "template_type":"list",
-          "top_element_style": "compact",
+          "template_type":"generic",
           "elements":[
              {
               "title":"Ejemplo 1",
@@ -172,13 +171,10 @@ function handlePostback(sender_psid, received_postback) {
               "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
               "buttons":[
                 {
-                  "title": "View",
-                  "type": "web_url",
-                  "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                  "messenger_extensions": true,
-                  "webview_height_ratio": "tall",
-                  "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                }
+                  "type":"web_url",
+                  "title":"Ir a la tienda online",
+                  "url" : 'https://www.linio.com.pe'
+                },
               ]
             }
           ]
@@ -190,22 +186,18 @@ function handlePostback(sender_psid, received_postback) {
       "attachment":{
         "type":"template",
         "payload":{
-          "template_type":"list",
-          "top_element_style": "compact",
+          "template_type":"generic",
           "elements":[
-             {
+            {
               "title":"Ejemplo 1",
               "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
               "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
               "buttons":[
                 {
-                  "title": "View",
-                  "type": "web_url",
-                  "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                  "messenger_extensions": true,
-                  "webview_height_ratio": "tall",
-                  "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                }
+                  "type":"web_url",
+                  "title":"Ir a la tienda online",
+                  "url" : 'https://www.linio.com.pe'
+                },
               ]
             }
           ]
@@ -219,8 +211,7 @@ function handlePostback(sender_psid, received_postback) {
       "attachment":{
         "type":"template",
         "payload":{
-          "template_type":"list",
-          "top_element_style": "compact",
+          "template_type":"generic",
           "elements":[
              {
               "title":"Ejemplo 1",
@@ -267,8 +258,7 @@ function handlePostback(sender_psid, received_postback) {
       "attachment":{
         "type":"template",
         "payload":{
-          "template_type":"list",
-          "top_element_style": "compact",
+          "template_type":"generic",
           "elements":[
              {
               "title":"Ejemplo 1",
@@ -317,8 +307,7 @@ function handlePostback(sender_psid, received_postback) {
       "attachment":{
         "type":"template",
         "payload":{
-          "template_type":"list",
-          "top_element_style": "compact",
+          "template_type":"generic",
           "elements":[
              {
               "title":"Ejemplo 1",
@@ -365,8 +354,7 @@ function handlePostback(sender_psid, received_postback) {
       "attachment":{
         "type":"template",
         "payload":{
-          "template_type":"list",
-          "top_element_style": "compact",
+          "template_type":"generic",
           "elements":[
              {
               "title":"Ejemplo 1",
