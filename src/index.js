@@ -114,7 +114,7 @@ function handlePostback(sender_psid, received_postback) {
                 {
                   "type":"postback",
                   "title":"Ver las ofertas",
-                  "payload": "yes"
+                  "payload": "teclado"
                 }             
               ]      
             },
@@ -126,7 +126,7 @@ function handlePostback(sender_psid, received_postback) {
                 {
                   "type":"postback",
                   "title":"Ver las ofertas",
-                  "payload": "yes"
+                  "payload": "mouse"
                 }             
               ]      
             },
@@ -138,7 +138,7 @@ function handlePostback(sender_psid, received_postback) {
                 {
                   "type":"postback",
                   "title":"Ver las ofertas",
-                  "payload": "yes"
+                  "payload": "pantalla"
                 }             
               ]      
             }
@@ -148,6 +148,10 @@ function handlePostback(sender_psid, received_postback) {
     }
   }else if(payload === 'B'){
     response = { 'text' : 'Escogiste B' }
+  }
+
+  if (payload==="teclado"){
+    response = {'text': 'Teclado'}
   }
 
   callSendAPI(sender_psid,response);
