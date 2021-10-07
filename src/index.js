@@ -75,11 +75,6 @@ function handleMessage(sender_psid, received_message) {
               "payload" : 'A'
             },
             {
-              "type":"postback",
-              "title":"Hablar con un agente",
-              "payload" : 'B'
-            },
-            {
               "type":"web_url",
               "title":"Ir a la tienda online",
               "url" : 'https://www.linio.com.pe'
@@ -113,9 +108,14 @@ function handlePostback(sender_psid, received_postback) {
               "buttons":[
                 {
                   "type":"postback",
-                  "title":"Ver las ofertas",
-                  "payload": "teclado"
-                }             
+                  "title":"Mecánico",
+                  "payload": "mecanico"
+                },
+                {
+                  "type":"postback",
+                  "title":"De membrana",
+                  "payload": "membrana"
+                }               
               ]      
             },
             {
@@ -125,9 +125,14 @@ function handlePostback(sender_psid, received_postback) {
               "buttons":[
                 {
                   "type":"postback",
-                  "title":"Ver las ofertas",
-                  "payload": "mouse"
-                }             
+                  "title":"Gamer",
+                  "payload": "gamer"
+                },
+                {
+                  "type":"postback",
+                  "title":"De escritorio",
+                  "payload": "escritorio"
+                }         
               ]      
             },
             {
@@ -137,21 +142,314 @@ function handlePostback(sender_psid, received_postback) {
               "buttons":[
                 {
                   "type":"postback",
-                  "title":"Ver las ofertas",
-                  "payload": "pantalla"
-                }             
+                  "title":"Planas",
+                  "payload": "plana"
+                },
+                {
+                  "type":"postback",
+                  "title":"Curvas",
+                  "payload": "curva"
+                }
               ]      
             }
           ]
         }
       }
     }
-  }else if(payload === 'B'){
-    response = { 'text' : 'Escogiste B' }
   }
 
-  if (payload==="teclado"){
-    response = {'text': 'Teclado'}
+  if (payload==="membrana"){
+    response = {
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"list",
+          "top_element_style": "compact",
+          "elements":[
+             {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }else if(payload === "mecanico"){
+    response = {
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"list",
+          "top_element_style": "compact",
+          "elements":[
+             {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+  
+  if(payload === "gamer"){
+    response = {
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"list",
+          "top_element_style": "compact",
+          "elements":[
+             {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }else if(payload === "escritorio"){
+    response = {
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"list",
+          "top_element_style": "compact",
+          "elements":[
+             {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+
+  if(payload === "plana"){
+    response = {
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"list",
+          "top_element_style": "compact",
+          "elements":[
+             {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }else if(payload === "curva"){
+    response = {
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"list",
+          "top_element_style": "compact",
+          "elements":[
+             {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            },
+            {
+              "title":"Ejemplo 1",
+              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Ejemplo",
+                  "payload": "ejemplo"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
   }
 
   callSendAPI(sender_psid,response);
