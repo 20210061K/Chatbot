@@ -104,7 +104,7 @@ function handlePostback(sender_psid, received_postback) {
              {
               "title":"Teclados",
               "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
-              "subtitle":"Lo mejor en teclados mecanicos y de membrana.",
+              "subtitle":"Teclados de respuesta rápida y de gran calidad.",
               "buttons":[
                 {
                   "type":"postback",
@@ -121,7 +121,7 @@ function handlePostback(sender_psid, received_postback) {
             {
               "title":"Mouse",
               "image_url": 'https://falabella.scene7.com/is/image/FalabellaPE/17448782_1?wid=800&hei=800&qlt=70',
-              "subtitle":"Para escritorio, gaming, etc.",
+              "subtitle":"De rápida respuesta y alto dpi.",
               "buttons":[
                 {
                   "type":"postback",
@@ -333,18 +333,6 @@ function handlePostback(sender_psid, received_postback) {
                   "type":"web_url",
                   "title":"Comprar",
                   "url" : 'https://www.linio.com.pe/p/monitor-gamer-samsung-lc27t550fdlxpe-opz8mg?qid=b4a13dbd914de9d4f09de08572158034&oid=SA026EL12ZEDWLPE&position=8&sku=SA026EL12ZEDWLPE'
-                }
-              ]
-            },
-            {
-              "title":"Teros TE-3173N",
-              "image_url": 'https://i.linio.com/p/c6f8d8284084fd7c05855bf90640aa83-product.webp',
-              "subtitle":"S/ 829.00",
-              "buttons":[
-                {
-                  "type":"web_url",
-                  "title":"Comprar",
-                  "url" : 'https://www.linio.com.pe/p/monitor-gamer-teros-te-3173n-27-ips-curvo-144-hz-1ms-full-hd-hdmi-gaming-3173-n46yy2?qid=b4a13dbd914de9d4f09de08572158034&oid=TE255EL178ZVALPE&position=29&sku=TE255EL178ZVALPE'
                 }
               ]
             }
