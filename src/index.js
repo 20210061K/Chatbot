@@ -107,8 +107,8 @@ function handlePostback(sender_psid, received_postback) {
         }
       }
     }
-  }
   callSendAPI(sender_psid,response);
+}
 // Mensaje de regreso
 function callSendAPI(sender_psid, response) {
   const requestBody = {
