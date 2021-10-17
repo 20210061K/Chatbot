@@ -116,26 +116,7 @@ function handlePostback(sender_psid, received_postback) {
       }
     }else if (convocatoria === "no"){
       response = {
-        "attachment":{
-          "type":"template",
-          "payload":{
-            "template_type":"generic",
-            "elements":[
-               {
-                "title":"Mouse",
-                "image_url": 'https://falabella.scene7.com/is/image/FalabellaPE/17448782_1?wid=800&hei=800&qlt=70',
-                "subtitle":"De rápida respuesta y alto dpi.",
-                "buttons":[
-                  {
-                    "type":"postback",
-                    "title":"Gamer",
-                    "payload": "gamer"
-                  },               
-                ]      
-              }
-            ]
-          }
-        }
+        "text": "Actualmente no hay convocatorias :(",
       }
     }
   
