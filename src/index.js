@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require('request')
-const convocatoria = "no"
+const convocatoria = 'si'
 
 const app = express().use(bodyParser.json());
 
@@ -91,7 +91,7 @@ function handlePostback(sender_psid, received_postback) {
   const payload = received_postback.payload;
 
   if(payload === 'A'){
-    if (convocatoria === "si"){
+    if (convocatoria === 'si'){
       response = {
         "attachment":{
           "type":"template",
@@ -108,8 +108,7 @@ function handlePostback(sender_psid, received_postback) {
           }
         }
       }
-    }
-    if (convocatoria === "no"){
+    }else if (convocatoria === 'no'){
       response = {
         "attachment":{
           "messaging_type": "RESPONSE",
