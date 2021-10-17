@@ -91,64 +91,66 @@ function handlePostback(sender_psid, received_postback) {
   const payload = received_postback.payload;
 
   if(payload === 'A'){
-    response = {
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-             {
-              "title":"Teclados",
-              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
-              "subtitle":"Teclados de respuesta rápida y de gran calidad.",
-              "buttons":[
-                {
-                  "type":"postback",
-                  "title":"Mecánico",
-                  "payload": "mecanico"
-                },
-                {
-                  "type":"postback",
-                  "title":"De membrana",
-                  "payload": "membrana"
-                }               
-              ]      
-            },
-            {
-              "title":"Mouse",
-              "image_url": 'https://falabella.scene7.com/is/image/FalabellaPE/17448782_1?wid=800&hei=800&qlt=70',
-              "subtitle":"De rápida respuesta y alto dpi.",
-              "buttons":[
-                {
-                  "type":"postback",
-                  "title":"Gamer",
-                  "payload": "gamer"
-                }     
-              ]      
-            },
-            {
-              "title":"Monitores",
-              "image_url": 'https://spartangeek.com/blog/content/images/2019/04/Asus-ROG-Swift-PG27UQ-monitores-para-pc.jpg',
-              "subtitle":"Planas, curvas, y para toda necesidad.",
-              "buttons":[
-                {
-                  "type":"postback",
-                  "title":"Planas",
-                  "payload": "plana"
-                },
-                {
-                  "type":"postback",
-                  "title":"Curvas",
-                  "payload": "curva"
-                }
-              ]      
-            }
-          ]
+    if (convocatoria === "si"){
+      response = {
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
+               {
+                "title":"Teclados",
+                "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
+                "subtitle":"Teclados de respuesta rápida y de gran calidad.",
+                "buttons":[
+                  {
+                    "type":"postback",
+                    "title":"Mecánico",
+                    "payload": "mecanico"
+                  },
+                  {
+                    "type":"postback",
+                    "title":"De membrana",
+                    "payload": "membrana"
+                  }               
+                ]      
+              },
+              {
+                "title":"Mouse",
+                "image_url": 'https://falabella.scene7.com/is/image/FalabellaPE/17448782_1?wid=800&hei=800&qlt=70',
+                "subtitle":"De rápida respuesta y alto dpi.",
+                "buttons":[
+                  {
+                    "type":"postback",
+                    "title":"Gamer",
+                    "payload": "gamer"
+                  }     
+                ]      
+              },
+              {
+                "title":"Monitores",
+                "image_url": 'https://spartangeek.com/blog/content/images/2019/04/Asus-ROG-Swift-PG27UQ-monitores-para-pc.jpg',
+                "subtitle":"Planas, curvas, y para toda necesidad.",
+                "buttons":[
+                  {
+                    "type":"postback",
+                    "title":"Planas",
+                    "payload": "plana"
+                  },
+                  {
+                    "type":"postback",
+                    "title":"Curvas",
+                    "payload": "curva"
+                  }
+                ]      
+              }
+            ]
+          }
         }
       }
     }
+  
   }
-
   callSendAPI(sender_psid,response);
 }
 // Mensaje de regreso
