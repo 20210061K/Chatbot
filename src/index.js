@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require('request')
-const convocatoria = 'si'
+const convocatoria = 'no'
 
 const app = express().use(bodyParser.json());
 
