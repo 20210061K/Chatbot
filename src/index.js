@@ -107,15 +107,21 @@ function handlePostback(sender_psid, received_postback) {
                     "type":"postback",
                     "title":"Mecánico",
                     "payload": "mecanico"
-                  },
-                  {
-                    "type":"postback",
-                    "title":"De membrana",
-                    "payload": "membrana"
-                  }               
+                  },               
                 ]      
-              },
-              {
+              }
+            ]
+          }
+        }
+      }
+    }else if (convocatoria === "no"){
+      response = {
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
+               {
                 "title":"Mouse",
                 "image_url": 'https://falabella.scene7.com/is/image/FalabellaPE/17448782_1?wid=800&hei=800&qlt=70',
                 "subtitle":"De rápida respuesta y alto dpi.",
@@ -124,24 +130,7 @@ function handlePostback(sender_psid, received_postback) {
                     "type":"postback",
                     "title":"Gamer",
                     "payload": "gamer"
-                  }     
-                ]      
-              },
-              {
-                "title":"Monitores",
-                "image_url": 'https://spartangeek.com/blog/content/images/2019/04/Asus-ROG-Swift-PG27UQ-monitores-para-pc.jpg',
-                "subtitle":"Planas, curvas, y para toda necesidad.",
-                "buttons":[
-                  {
-                    "type":"postback",
-                    "title":"Planas",
-                    "payload": "plana"
-                  },
-                  {
-                    "type":"postback",
-                    "title":"Curvas",
-                    "payload": "curva"
-                  }
+                  },               
                 ]      
               }
             ]
