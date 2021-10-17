@@ -91,9 +91,8 @@ function handlePostback(sender_psid, received_postback) {
   const payload = received_postback.payload;
 
   if(payload === 'A'){
-    if (convocatoria === "si"){
+    if (convocatoria === 'si'){
       response = {
-        "text": "Hay una convocatoria activa :D",
         "attachment":{
           "type":"template",
           "payload":{
