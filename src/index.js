@@ -97,7 +97,7 @@ function handlePostback(sender_psid, received_postback) {
           "type":"template",
           "payload":{
             "template_type":"button",
-            "text": "¿Deseas inscribirte?",
+            "text": "Hay una convocatoria activa, ¿deseas inscribirte?",
             "buttons":[
               {
                 "type":"web_url",
