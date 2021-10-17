@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require('request')
-const convocatoria = 'si'
+
+const convocatoria = process.env.CONVOCATORIA;
 
 const app = express().use(bodyParser.json());
 
@@ -91,7 +92,7 @@ function handlePostback(sender_psid, received_postback) {
   const payload = received_postback.payload;
 
   if(payload === 'A'){
-    if (convocatoria === 'si'){
+    if (convocatoria === 'ON'){
       response = {
         "attachment":{
           "type":"template",
@@ -108,7 +109,7 @@ function handlePostback(sender_psid, received_postback) {
           }
         }
       }
-    }else if (convocatoria === "no"){
+    }else if (convocatoria === 'OFF'){
       response = {
         "text": "Actualmente no hay convocatorias :(",
       }
