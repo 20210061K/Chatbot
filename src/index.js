@@ -101,7 +101,7 @@ function handlePostback(sender_psid, received_postback) {
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                "url":"https://docs.google.com/forms/u/0/?tgif=c",
                 "title":"Inscribirte ahora ",
               },
             ]
