@@ -93,23 +93,18 @@ function handlePostback(sender_psid, received_postback) {
   if(payload === 'A'){
     if (convocatoria === "si"){
       response = {
+        "text": "Hay una convocatoria activa :D",
         "attachment":{
           "type":"template",
           "payload":{
-            "template_type":"generic",
-            "elements":[
-               {
-                "title":"Teclados",
-                "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
-                "subtitle":"Teclados de respuesta rápida y de gran calidad.",
-                "buttons":[
-                  {
-                    "type":"postback",
-                    "title":"Mecánico",
-                    "payload": "mecanico"
-                  },               
-                ]      
-              }
+            "template_type":"button",
+            "text": "¿Deseas inscribirte?",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                "title":"Inscribirte ahora ",
+              },
             ]
           }
         }
