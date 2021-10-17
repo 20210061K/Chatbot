@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require('request')
+const convocatoria = "si"
 
 const app = express().use(bodyParser.json());
 
@@ -90,23 +91,35 @@ function handlePostback(sender_psid, received_postback) {
   const payload = received_postback.payload;
 
   if(payload === 'A'){
-    response = {
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"button",
-          "text":"¿Que deseas hacer?",
-          "buttons":[
-            {
-              "type":"postback",
-              "title":"Pertenecer al equipo",
-              "postback": "pertenecer"
-            }        
-            ]      
+      if (convocatoria === "si"){
+        response = {
+          "attachment":{
+            "type":"template",
+            "payload":{
+              "template_type":"button",
+              "text":"¿Que deseas hacer?",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Pertenecer al equipo",
+                  "postback": "pertenecer"
+                }        
+              ]      
+            }
           }
         }
       }
-    }
+      if (convocatoria === "no"){
+        response = {
+          "attachment":{
+            "messaging_type": "RESPONSE",
+            "message":{
+              "text": "Actualmente no hay convocatorias :(",
+                }        
+            }
+          }
+        }
+      }
   callSendAPI(sender_psid,response);
 }
 // Mensaje de regreso
