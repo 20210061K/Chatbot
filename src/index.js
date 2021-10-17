@@ -94,32 +94,21 @@ function handlePostback(sender_psid, received_postback) {
       "attachment":{
         "type":"template",
         "payload":{
-          "template_type":"generic",
-          "elements":[
-             {
-              "title":"Teclados",
-              "image_url": 'https://http2.mlstatic.com/D_NQ_NP_773666-MPE41546723471_042020-O.jpg',
-              "subtitle":"Teclados de respuesta rápida y de gran calidad.",
-              "buttons":[
-                {
-                  "type":"postback",
-                  "title":"Mecánico",
-                  "payload": "mecanico"
-                },
-                {
-                  "type":"postback",
-                  "title":"De membrana",
-                  "payload": "membrana"
-                }               
-              ]      
-            }
-          ]
+          "template_type":"button",
+          "text":"¿Que deseas hacer?",
+          "buttons":[
+            {
+              "type":"postback",
+              "title":"Pertenecer al equipo",
+              "postback": "pertenecer"
+            }        
+            ]      
+          }
         }
       }
     }
   }
   callSendAPI(sender_psid,response);
-}
 // Mensaje de regreso
 function callSendAPI(sender_psid, response) {
   const requestBody = {
