@@ -92,7 +92,7 @@ function handlePostback(sender_psid, received_postback) {
   const payload = received_postback.payload;
 
   if(payload === 'A'){
-    if (convocatoria === 'ON'){
+    if (convocatoria === 'SI'){
       response = {
         "attachment":{
           "type":"template",
@@ -109,7 +109,7 @@ function handlePostback(sender_psid, received_postback) {
           }
         }
       }
-    }else if (convocatoria === 'OFF'){
+    }else if (convocatoria === 'NO'){
       response = {
         "text": "Actualmente no hay convocatorias :(",
       }
